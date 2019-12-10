@@ -5,10 +5,17 @@ class Chronometer {
   }
 
   startClick() {
+    this.intervalId = setInterval(
+      function() {
+        this.currentTime++;
+      }.bind(this),
+      1000
+    );
+    /*
     var chrono = this;
     this.intervalId = setInterval(function() {
       chrono.currentTime++;
-    }, 1000);
+    }, 1000);*/
   }
 
   getMinutes() {
@@ -24,10 +31,10 @@ class Chronometer {
     }
     return num.toString();
   }
-   stopClick() {
-     clearInterval(this.intervalId);
-   }
-  
+  stopClick() {
+    clearInterval(this.intervalId);
+  }
+
   resetClick() {
     this.currentTime = 0;
   }
