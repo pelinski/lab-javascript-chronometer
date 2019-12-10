@@ -10,7 +10,7 @@ class Chronometer {
         this.currentTime++;
       }.bind(this),
       1000
-    );
+    )
     /*
     var chrono = this;
     this.intervalId = setInterval(function() {
